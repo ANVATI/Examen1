@@ -1,0 +1,98 @@
+{
+    "name": "PlayerAction",
+    "maps": [
+        {
+            "name": "PlayerMovement",
+            "id": "26cfd8c7-7302-4a9b-a429-a5d8e75d00c4",
+            "actions": [
+                {
+                    "name": "OnMove",
+                    "type": "Value",
+                    "id": "d47a8f1c-b57c-4ee0-967d-cefcd4a74e0d",
+                    "expectedControlType": "Vector3",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "OnJump",
+                    "type": "Button",
+                    "id": "84276a80-221b-4270-9f4c-fd65fb95434a",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "3D Vector",
+                    "id": "64ed4993-fdce-4722-a695-6ce645fb9edb",
+                    "path": "3DVector(mode=1)",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "OnMove",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "Left",
+                    "id": "1ff22f4d-3ef1-4b39-a6d1-a03bb9045be4",
+                    "path": "<Keyboard>/a",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "OnMove",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "Right",
+                    "id": "4b6e18ab-3611-452c-a537-4539e442a8a2",
+                    "path": "<Keyboard>/d",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "OnMove",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "Forward",
+                    "id": "228837cf-c9f1-4201-a6be-00c9244fc409",
+                    "path": "<Keyboard>/w",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "OnMove",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "Backward",
+                    "id": "c6d11bfa-eda1-43ff-ba0c-a845e5d3acc6",
+                    "path": "<Keyboard>/s",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "OnMove",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "",
+                    "id": "6e3c1fe1-6bd6-412f-985c-a4da9f68d8f3",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "OnJump",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
