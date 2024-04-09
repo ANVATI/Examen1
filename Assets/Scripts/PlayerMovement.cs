@@ -13,6 +13,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private LayerMask groundLayers;
     [SerializeField] private float rayDistance = 2f;
     [SerializeField] private Color rayDebugColor = Color.red;
+    [SerializeField] private int life = 100;
 
     private Vector3 movement;
     public Rigidbody myRB;
@@ -51,16 +52,40 @@ public class PlayerMovement : MonoBehaviour
             }
         }
     }
-    
+    public void Damage(int damage)
+    {
+        life = life - damage;
+    }
+
+    private void OnCollisionStay(Collision collision)
+    {
+        if (collision.gameObject.tag == "Floor")
+        {
+            if (life <= 100)
+            {
+                life = life + 1;
+                Debug.Log("La vida se actualiza en 1");
+            }
+        }
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Enemie")
+        {
+            life = life - 20;
+            Debug.Log("Vida: -20");
+        }
+    }
+
+    /*
     private void FixedUpdate()
     {
         //myRB.velocity = Vector3.Scale(movement, new Vector3(speed, 1, speed));
-    /*
         if (Input.GetKeyDown(KeyCode.Space) && canJump)
         {
             myRB.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
         }
-    */
+  
     }
-
+    */
 }

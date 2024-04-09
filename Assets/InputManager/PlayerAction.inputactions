@@ -28,7 +28,7 @@
                 {
                     "name": "3D Vector",
                     "id": "64ed4993-fdce-4722-a695-6ce645fb9edb",
-                    "path": "3DVector(mode=1)",
+                    "path": "3DVector",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
